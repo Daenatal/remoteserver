@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Quotable Quotes Login</title>
+        {% load static %}
+        <link rel='stylesheet' href="{% static 'quotes/css/main.css' %}" media='screen' title='no title' charset='utf-8'>
+    </head>
+    <body>
+        <h1>Welcome to Quotable Quotes</h1>
+        {% if messages %}
+        <div class='messages'>
+            {% for message in messages %}
+            <p{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</p>
+            {% endfor %}
+        </div>
+        {% endif %}
+        <form action='/create' method='post'>
+            {% csrf_token %}
+            <fieldset>
+                <legend>Register</legend>
+                Name:       <input type="text" name="name" placeholder="Enter Name">
+                Username:   <input type="text" name="username" placeholder="Enter Username">
+                Password:   <input type="text" name="password" placeholder="Enter Password">
+                Confirm PW: <input type="text" name="confirm" placeholder="Re-enter Password">
+                Date of Birth:<input type = "date" name="date">
+                <input type='submit' value='Register'>
+            </fieldset>
+        </form>
+        <form action='/dashboard' method='post'>
+            {% csrf_token %}
+            <fieldset>
+                <legend>Login</legend>
+                Username: <input type="text" name="username" placeholder="Enter Username">
+                Password: <input type="text" name="password" placeholder="Enter Password">
+                <input type='submit' value='Login'>
+            </fieldset>
+        </form>
+        <!--<h2>All Users So Far:</h2> making sure my database is setup
+        {% for user in users %}
+           <p>{{user.name}}</p>
+        {% endfor %} --> 
+    </body>
+</html>

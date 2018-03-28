@@ -1,0 +1,56 @@
+body {
+    width: 970px;
+    margin: 0 auto;
+}
+
+h1{
+    text-align: center;
+}
+
+form {
+    width: 480px;
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    font-size: 14pt;
+    
+}
+
+.quotes{
+    border: 3px dotted rgb(0, 238, 255);
+    margin: 2px;
+    padding: 0 5px 5px 5px;
+}
+
+input {
+    margin: 0 140px 10px 10px;
+    align-content: right;
+    
+}
+
+
+a {
+    margin: 0 0 0 0px;
+}
+
+
+
+#left {
+    width: 480px;
+    display: inline-block;
+}
+
+#right {
+    width: 480px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.messages {
+    font-size: 12pt; 
+    color: rgb(236, 28, 28);
+}
+
+p {
+    width: 400px;
+}
